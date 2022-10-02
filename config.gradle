@@ -1,0 +1,38 @@
+// config
+def compileSdkVersion = 32
+def buildToolsVersion = "32.0.2"
+def minSdkVersion = 21
+def targetSdkVersion = 32
+def versionCode = 1
+def versionName = "v1.0.1"
+
+// dependencies-app
+def appcompat = "1.0.2"
+def constraintlayout = "1.1.3"
+def junit = "4.12"
+def runner = "1.2.0"
+def espressoCore = "3.2.0"
+def recyclerview = "29.0.2"
+def eventbus = "3.1.1"
+
+ext {
+    config = [
+            "compileSdkVersion": compileSdkVersion,
+            "buildToolsVersion": buildToolsVersion,
+            "minSdkVersion"    : minSdkVersion,
+            "targetSdkVersion" : targetSdkVersion,
+            "versionCode"      : versionCode,
+            "versionName"      : versionName
+    ]
+
+    dependencies = [
+            "appcompat"       : "androidx.appcompat:appcompat:${appcompat}",
+            "constraintlayout": "androidx.constraintlayout:constraintlayout:${constraintlayout}",
+            "junit"           : "junit:junit:${junit}",
+            "runner"          : "androidx.test:runner:${runner}",
+            "espressoCore"    : "androidx.test.espresso:espresso-core:${espressoCore}",
+            "recyclerview"    : "com.android.support:recyclerview-v7:${recyclerview}",
+
+            "eventbus"        : "org.greenrobot:eventbus:${eventbus}"
+    ]
+}

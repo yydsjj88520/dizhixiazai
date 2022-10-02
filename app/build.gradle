@@ -66,9 +66,36 @@ dependencies {
 // https://mvnrepository.com/artifact/net.dongliu/apk-parser
     implementation group: 'net.dongliu', name: 'apk-parser', version: '2.6.9'
 
-    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+//    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation project(':library_update')
 
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["runner"]
+    androidTestImplementation rootProject.ext.dependencies["espressoCore"]
+    implementation rootProject.ext.dependencies["recyclerview"]
+    implementation rootProject.ext.dependencies["eventbus"]
+
+
+
+
+
+
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //OKHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.2.0'
+    //RxJava和RxAndroid 用来做线程切换的
+    implementation('io.reactivex.rxjava3:rxandroid:3.0.0')
+    implementation('io.reactivex.rxjava3:rxjava:3.0.0')
     //gradle测试
 //    implementation 'com.github.maning0303:MNUpdateAPK:V2.0.5'
 }
